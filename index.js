@@ -4,10 +4,10 @@ var websocket = require('websocket-stream');
 
 log.info('facebook messenger bot', 'started')
 
-var unsentMessageId = 'mid.$cAAAAAfF2wCyBEk31Hl64Qir5H0mk'; //put the unsent message ID
-var cookies = ''; //put your cookies
-var lastSequenceId = 0; //put last sequence id
-
+var unsentMessageId = 'mid.$gAA_GUHDKpcGBIgluJ168MVbHuBk9'; //put the unsent message ID
+var cookies = 'sb=T82mYG80LYxsZkWNfWafbEjq; datr=UM2mYOZk10Abr9ZYTuaWfhEQ; c_user=100009985927020; dpr=1.25; spin=r.1004169522_b.trunk_t.1627461617_s.1_v.2_; m_pixel_ratio=1.25; xs=19%3AIXrdh_rMg9l8VA%3A2%3A1624877736%3A-1%3A6232%3A%3AAcUHmIoJa_tN3-73ZRZwEVFFE5MhEIK-FU-kHeGGcIj_; fr=144l8XE1Vfpdmms0r.AWWuBx6rYEHDqVYOfa9xwlHpI7g.BhAj0M.Wn.AAA.0.0.BhAj0M.AWVaOAwvhpQ; x-referer=eyJyIjoiL21lc3NhZ2VzL3JlYWQvP3RpZD1jaWQuZy40NDQwMTczNDQyNjcyMDY1JmVudHJ5cG9pbnQ9amV3ZWwmc3VyZmFjZV9oaWVyYXJjaHk9dW5rbm93biIsImgiOiIvbWVzc2FnZXMvcmVhZC8%2FdGlkPWNpZC5nLjQ0NDAxNzM0NDI2NzIwNjUmZW50cnlwb2ludD1qZXdlbCZzdXJmYWNlX2hpZXJhcmNoeT11bmtub3duIiwicyI6Im0ifQ%3D%3D; wd=1009x722'; //put your cookies
+var lastSequenceId = 2259907; //put last sequence id
+var yourUserId = "100009985927020";
 var topics = [
     "/t_ms",
     "/thread_typing",
@@ -28,7 +28,7 @@ var topics = [
 ];
 
 var sessionID = Math.floor(Math.random() * 9007199254740991) + 1;
-var username = { "u": "100009985927020", "s": sessionID, "cp": 3, "ecp": 10, "chat_on": true, "fg": false, "d": "507dbbfd-533a-4306-9cd8-1e733581ab1d", "ct": "websocket", "mqtt_sid": "", "aid": 219994525426954, "st": topics, "pm": [], "dc": "", "no_auto_fg": true, "gas": null, "pack": [], "php_override": "" }
+var username = { "u": yourUserId, "s": sessionID, "cp": 3, "ecp": 10, "chat_on": true, "fg": false, "d": "507dbbfd-533a-4306-9cd8-1e733581ab1d", "ct": "websocket", "mqtt_sid": "", "aid": 219994525426954, "st": topics, "pm": [], "dc": "", "no_auto_fg": true, "gas": null, "pack": [], "php_override": "" }
 var host = 'wss://edge-chat.messenger.com/chat?region=atn&sid=' + sessionID;
 
 var options = {
